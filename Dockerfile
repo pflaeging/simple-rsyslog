@@ -1,4 +1,4 @@
-FROM default-route-openshift-image-registry.apps.a2.cp.cna.at/cp-baseimages/brz-cp-ubi8-ubi-minimal:latest
+FROM registry.access.redhat.com/ubi8/ubi-minimal::latest
 
 LABEL summary="Simple RSyslog" \
       description="Simple RSyslog container" \
