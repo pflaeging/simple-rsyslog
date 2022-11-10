@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal::latest
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 
 LABEL summary="Simple RSyslog" \
       description="Simple RSyslog container" \
