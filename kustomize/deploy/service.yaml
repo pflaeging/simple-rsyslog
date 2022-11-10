@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: simple-rsyslog
+spec:
+  ports:
+    - name: tcp-syslog
+      protocol: TCP
+      port: 1514
+      targetPort: 1514
+  selector:
+    app: simple-rsyslog
+  type: ClusterIP
+  sessionAffinity: None
+
