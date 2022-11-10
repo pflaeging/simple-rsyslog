@@ -20,5 +20,5 @@ vars:
 
 images:
 - name: quay.io/pflaeging/simple-rsyslog
-  newName: image-registry.openshift-image-registry.svc:5000/brz-ws-paas/simple-rsyslog
+  newName: image-registry.openshift-image-registry.svc:5000/develop/simple-rsyslog
   newTag: latest

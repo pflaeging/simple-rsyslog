@@ -5,11 +5,5 @@ resources:
 - buildconfig.yaml
 - imagestream.yaml
 
-secretGenerator:
-- name: bitbucket-pull-ssh
-  files:
-  - ssh-privatekey=getter-key
-  type: kubernetes.io/ssh-auth
-
 generatorOptions:
   disableNameSuffixHash: true

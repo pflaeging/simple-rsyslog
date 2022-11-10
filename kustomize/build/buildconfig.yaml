@@ -26,11 +26,9 @@ spec:
   source:
     type: Git
     git:
-      uri: 'ssh://git@git.brz.gv.at:7999/paascpp/simple-rsyslog.git'
+      uri: 'https://gitlab.pflaeging.net/pflaeging-net-public/simple-rsyslog.git'
       ref: main
     contextDir: /
-    sourceSecret:
-      name: bitbucket-pull-ssh
   triggers:
     - type: ConfigChange
   runPolicy: Serial
