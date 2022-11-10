@@ -1,0 +1,36 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: simple-rsyslog
+  labels:
+    app: simple-rsyslog
+spec:
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "512Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'simple-rsyslog:latest'
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  postCommit: {}
+  source:
+    type: Git
+    git:
+      uri: 'ssh://git@git.brz.gv.at:7999/paascpp/simple-rsyslog.git'
+      ref: main
+    contextDir: /
+    sourceSecret:
+      name: bitbucket-pull-ssh
+  triggers:
+    - type: ConfigChange
+  runPolicy: Serial
