@@ -24,6 +24,6 @@ RUN chgrp -R 0 /var/lib/rsyslog && \
 
 COPY rsyslog.conf /etc/rsyslog.conf
 
-EXPOSE 10514
+EXPOSE 1514
 USER 1001
 CMD ["sh", "-c", "/usr/sbin/rsyslogd -i /tmp/rsyslog.pid -n -f /etc/rsyslog.conf"]
