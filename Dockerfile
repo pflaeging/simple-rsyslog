@@ -20,6 +20,7 @@ RUN chgrp -R 0 /var/lib/rsyslog && \
     chmod -R g+rwX /var/lib/rsyslog && \
     chgrp -R 0 /var/log && \
     chmod -R g+rwX /var/log
+    
 
 COPY rsyslog.conf /etc/rsyslog.conf
 

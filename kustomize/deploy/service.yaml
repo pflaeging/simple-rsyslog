@@ -1,6 +1,8 @@
 kind: Service
 apiVersion: v1
 metadata:
+  annotations:
+    service.beta.openshift.io/serving-cert-secret-name: simple-rsyslog
   name: simple-rsyslog
 spec:
   ports:
