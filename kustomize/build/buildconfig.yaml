@@ -26,9 +26,11 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://gitlab.pflaeging.net/pflaeging-net-public/simple-rsyslog'
+      uri: 'https://gitlab.pflaeging.net/pflaeging-net-public/simple-rsyslog.git'
       ref: main
     contextDir: /
+    sourceSecret:
+      name: pull-secret
   triggers:
     - type: ConfigChange
   runPolicy: Serial

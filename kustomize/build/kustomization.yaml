@@ -5,5 +5,10 @@ resources:
 - buildconfig.yaml
 - imagestream.yaml
 
+secretGenerator:
+ - name: pull-secret
+   files:
+   - .gitconfig=dot-gitconfig.ini
+
 generatorOptions:
   disableNameSuffixHash: true

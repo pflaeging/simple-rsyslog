@@ -12,7 +12,7 @@ LABEL summary="Simple RSyslog" \
 
 USER 0
 
-RUN  microdnf -y install rsyslog && \
+RUN  microdnf -y install rsyslog rsyslog-gnutls && \
 	 microdnf clean all && \
      rm -rf /var/cache/yum
 
